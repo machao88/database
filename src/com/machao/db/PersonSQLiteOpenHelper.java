@@ -13,9 +13,9 @@ public class PersonSQLiteOpenHelper extends SQLiteOpenHelper {
 	}
 
 	@Override
-	public void onCreate(SQLiteDatabase arg0) {
+	public void onCreate(SQLiteDatabase db) {
 		// TODO Auto-generated method stub
-
+		db.execSQL("create table person (id integer primary key autoincrement, name varchar(20), number varchar(20))");
 	}
 
 	@Override
