@@ -19,9 +19,9 @@ public class PersonDao {
 		helper = new PersonSQLiteOpenHelper(context);
 	}
 
-	public void add(String name, String number){
+	public void add(String name, String number, int money){
 		SQLiteDatabase db = helper.getWritableDatabase();
-		db.execSQL("insert into person (name, number) values (?, ?)", new Object[]{name, number});
+		db.execSQL("insert into person (name, number, account) values (?, ?, ?)", new Object[]{name, number, money});
 		db.close();
 	}
 	public void update(String name, String newnumber){

@@ -18,14 +18,14 @@ public class PersonSQLiteOpenHelper extends SQLiteOpenHelper {
 	@Override
 	public void onCreate(SQLiteDatabase db) {
 		// TODO Auto-generated method stub
-		db.execSQL("create table person (id integer primary key autoincrement, name varchar(20), number varchar(20))");
+		db.execSQL("create table person (id integer primary key autoincrement, name varchar(20), number varchar(20), account varchar(20))");
 	}
 
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int arg1, int arg2) {
 		// TODO Auto-generated method stub
 		Log.i(TAG, "数据库发生变化了。。。。");
-		db.execSQL("alter table person add account varchar(20);");
+		//db.execSQL("alter table person add  account varchar(20);");
 
 	}
 
